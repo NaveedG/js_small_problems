@@ -4,11 +4,11 @@ let readlineSync = require('readline-sync');
 
 // retrieve length input from user
 console.log('Enter the length of the room in meters:')
-let length = readlineSync.prompt()
+let length = Number(readlineSync.prompt())
 
 // retrieve width input from user
 console.log('Enter the width of the room in meters:')
-let width = readlineSync.prompt()
+let width = Number(readlineSync.prompt())
 
 // log area of the room in square meters and square feet
 let area = length * width
