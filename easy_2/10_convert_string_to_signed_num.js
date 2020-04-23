@@ -20,11 +20,11 @@ stringToInteger = str => {
 
 // new solution
 stringToSignedInteger = str => {
-  if (str[0] === '-') {
+  if (str[0] === '-')
     return -stringToInteger(str.substring(1))
-  } else if (str[0] === '+') {
+  else if (str[0] === '+')
     return stringToInteger(str.substring(1))
-  } else
+  else
     return stringToInteger(str)
 }
 
