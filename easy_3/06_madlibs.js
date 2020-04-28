@@ -19,4 +19,15 @@ const readlineSync = require('readline-sync')
 console.log('Enter a noun:')
 const noun = readlineSync.prompt()
 
-console.log(noun)
+console.log('Enter a verb:')
+const verb = readlineSync.prompt()
+
+console.log('Enter an adjective:')
+const adjective = readlineSync.prompt()
+
+console.log('Enter an adverb:')
+const adverb = readlineSync.prompt()
+
+console.log(`Do you ${verb} your ${adjective} ${noun} ${adverb}? That's hilarious!
+The ${adjective} ${noun} ${verb + 's'} ${adverb} over the lazy ${noun}.
+The ${noun} ${adverb} ${verb + 's'} up ${adjective} Joe's turtle.`)
