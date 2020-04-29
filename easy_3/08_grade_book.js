@@ -13,16 +13,11 @@ Tested values are all between 0 and 100. There is no need to check for negative 
 getGrade = (score1, score2, score3) => {
   const mean = ((score1 + score2 + score3) / 3)
   switch (true) {
-    case (mean >= 90 && mean <= 100):
-      return 'A'
-    case (mean >= 80 && mean < 90 ):
-      return 'B'
-    case (mean >= 70 && mean < 80):
-      return 'C'
-    case (mean >= 60 && mean < 70):
-      return 'D'
-    case (mean >= 0 && mean < 60):
-      return 'F'
+    case (mean >= 90 && mean <= 100): return 'A'
+    case (mean >= 80 && mean < 90 ): return 'B'
+    case (mean >= 70 && mean < 80): return 'C'
+    case (mean >= 60 && mean < 70): return 'D'
+    case (mean >= 0 && mean < 60): return 'F'
   }
 }
 
