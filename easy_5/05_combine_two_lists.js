@@ -4,9 +4,7 @@ You may assume that both input arrays are non-empty, and that they have the same
 
 interleave = (arr1, arr2) => {
   const newArr = []
-  for (let i = 0; i < arr1.length; i++) {
-    newArr.push(arr1[i], arr2[i])
-  }
+  for (let i = 0; i < arr1.length; i++) newArr.push(arr1[i], arr2[i])
   return newArr
 }
 
