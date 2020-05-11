@@ -6,8 +6,8 @@ Write a function that takes a time using this minute-based format and returns th
 You may not use javascript's Date class methods. */
 
 timeOfDay = num => {
-  while (num > 1440) num -= 1440 // if number exceeds 24 hours
-  while (num < 0) num += 1440 // if number is negative
+  while (num > 1440) num -= 1440 // result cannot exceed 24 hours
+  while (num < 0) num += 1440 // result cannot be negative
 
   let hh = Math.floor(num / 60)
   let mm = num % 60
