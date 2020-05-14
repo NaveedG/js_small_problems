@@ -3,15 +3,13 @@ The return value should be the same Array object.
 
 You may not use Array.prototype.reverse(). */
 
-reverse = (arr, count = 0) => {
-  if (count === Math.floor(arr.length / 2))
-    return arr
-  else {
-    let temp = arr[count]
-    arr[count] = arr[arr.length - count - 1]
-    arr[arr.length - count - 1] = temp
-    return reverse(arr, count += 1)
+reverse = arr => {
+  for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+    let temp = arr[i]
+    arr[i] = arr[arr.length - i - 1]
+    arr[arr.length - i - 1] = temp
   }
+  return arr
 }
 
 let list = [1, 2, 3, 4];
