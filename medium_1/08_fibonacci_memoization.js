@@ -7,7 +7,7 @@ const obj = {}
 fibonacci = num => {
 	if (num === 0) return 0
 	if (num === 1) return 1
-	return (obj[num]) ? obj[num] : fibonacci(num - 1) + fibonacci(num - 2)
+	return (obj[num]) ? obj[num] : obj[num] = fibonacci(num - 1) + fibonacci(num - 2)
 }
 
 console.log(fibonacci(1));       // 1
