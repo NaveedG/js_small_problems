@@ -5,9 +5,9 @@ For this exercise, your objective is to refactor the recursive fibonacci functio
 
 const obj = {}
 fibonacci = num => {
-	if (num === 0) return 0
-	if (num === 1) return 1
-	return (obj[num]) ? obj[num] : obj[num] = fibonacci(num - 1) + fibonacci(num - 2)
+  if (num === 0) return 0
+  if (num === 1) return 1
+  return (obj[num]) ? obj[num] : obj[num] = fibonacci(num - 1) + fibonacci(num - 2)
 }
 
 console.log(fibonacci(1));       // 1
