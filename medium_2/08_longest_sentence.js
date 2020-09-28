@@ -3,6 +3,23 @@ You should treat any sequence of characters that are not spaces or sentence-endi
 Pay attention to the expected output, and be sure you preserve the punctuation from the end of the sentence. Note that this problem is about manipulating and processing strings. 
 As such, every detail about the string matters (e.g., case, punctuation, tabs, spaces, etc.). */
 
+longestSentence = str => {
+  const strArr = str.match(/\w.*?[.!?]/g)
+  let longestSentence
+  let longestLength = 0
+
+  strArr.forEach(sentence => {
+    let sentArr = sentence.split(' ')
+    if (sentArr.length > longestLength) {
+      longestSentence = sentence
+      longestLength = sentArr.length
+    }
+  })
+
+  console.log(longestSentence)
+  console.log(`The longest sentence has ${longestLength} words.`)
+}
+
 let longText =
   'Four score and seven years ago our fathers brought forth on this ' +
   'continent a new nation, conceived in liberty, and dedicated to the ' +
