@@ -15,6 +15,17 @@ leadingSubstrings = str => {
   return substrings
 }
 
+// new higher-order function
+substrings = str => {
+  const substrings = []
+  let substr = str
+  while (substr.length > 0) {
+    leadingSubstrings(substr).forEach(str => substrings.push(str)) // helper function call
+    substr = substr.slice(1)
+  }
+  return substrings
+}
+
 console.log(substrings('abcde'));
 
 /* returns
