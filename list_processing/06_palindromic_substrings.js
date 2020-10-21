@@ -28,10 +28,18 @@ substrings = str => {
   return substrings
 }
 
-// new higher order function
-palindromes = str => [
+// new helper function
+isPalindrome = str => {
+  const reverse = str.split('').reverse().join('')
+  if (str === reverse) return str
+}
 
-]
+// new higher order function
+palindromes = strings => {
+  const palindromes = []
+  strings.split(' ').forEach(str => substrings(str).forEach(substr => palindromes.push(substr))) // first helper function call
+  return palindromes.filter(str => str.length > 1 && isPalindrome(str)) // second helper function call
+}
 
 console.log(palindromes('abcd'));       // []
 console.log(palindromes('madam'));      // [ "madam", "ada" ]
